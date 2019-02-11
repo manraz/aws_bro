@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Conn Data</h2>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+</head>
+  <!-- table creation -->
+ <h2>Log entries</h2>
+ <div style="height:300px;overflow:auto;">
+     <table id="customers">
+        <!-- Setup fields -->
+        <thead>
+            <tr>
+                {% for value in fieldsLst[:12] %}
+                <th>{{ value }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <!--print entries up to protocol field-->
+        <tbody>
+            <tr>
+            {% for line  in nestLst %}
+            <tr>
+                {% for entry in line[:12] %}
+                <td>{{entry}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            </tr>
+        </tbody>
+     </table>
+ </div>
+ <h2>Most Active IP's</h2>
+ <div style="height:200px;overflow:auto;">
+     <table id="customers">
+         <thead>
+             <tr>
+                 <th>IP</th>
+                 <th>Count</th>
+             </tr>
+        </thead>
+        <tbody>
+            {% for ip in ipLstSet%}
+            <tr>
+            {% if  ipLst.count(ip) > 2 %}
+                <td>{{ ip }}</td>
+                <td>{{ ipLst.count(ip) }}</td>
+            {% endif %}
+            </tr>
+            {% endfor %}
+            </tr>
+        </tbody>
+     </table>
+ </div>
+ <h2>Most active IP's geolocation</h2>
+ <div style="height:200px;overflow:auto;">
+     <table id="customers">
+         <thead>
+             <tr>
+                 {% for key, value in record.items() %}
+                 <th>{{ key }}</th>
+                 {% endfor %}
+             </tr>
+         </thead>
+         <tbody>
+             {% for key, value  in recordDict.items() %}
+             <tr>
+                 {% for k, v in value.items() %}
+                     <td>{{ v }}</td>
+             {% endfor %}
+             </tr>
+             {% endfor %}
+         </tbody>
+      </table>
+ </div>
+ <h2>HTTPS Connections</h2>
+ <div style="height:200px;overflow:auto;">
+     <table id="customers">
+        <!-- Setup fields -->
+        <thead>
+            <tr>
+                {% for value in fieldsLst[2:12] %}
+                <th>{{ value }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <!--print entries up to protocol field-->
+        <tbody>
+            <tr>
+            {% for line  in nestLst %}
+            <tr>
+                {% if line[7] == 'ssl'  %}
+                    {% for entry in line[2:12] %}
+                        <td>{{ entry }}</td>
+                    {% endfor %}
+                {% endif %}
+            </tr>
+            {% endfor %}
+            </tr>
+        </tbody>
+     </table>
+ </div>
+
+{% endblock %}

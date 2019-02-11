@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title> Bro Log Files </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='navigator.css') }}">
+</head>
+<body>
+  <!-- navigation bar -->
+  <ul>
+    <li><a  class="active" href="{{ url_for('homepage') }}">HTTP LOG </a></li>
+    <li><a href="{{ url_for('connpage') }}">CONN LOG </a></li>
+    <li><a href="{{ url_for('dnspage') }}">DNS LOG </a></li>
+    <li><a href="{{ url_for('dhcppage') }}">DHCP LOG </a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+  </ul>
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>

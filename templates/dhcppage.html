@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>DHCP Data</h2>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+</head>
+  <!-- table creation -->
+ <h2>Log entries</h2>
+ <div style="height:200px;overflow:auto;">
+     <table id="customers">
+        <!-- Setup fields -->
+        <thead>
+            <tr>
+                {% for value in fieldsLst[2:8] %}
+                <th>{{ value }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <!--print entries up to protocol field-->
+        <tbody>
+            <tr>
+            {% for line  in nestLst %}
+            <tr>
+                {% for entry in line[2:8] %}
+                <td>{{entry}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            </tr>
+        </tbody>
+     </table>
+     </div>
+     <h2>Nic Cards</h2>
+     <div style="height:150px;overflow:auto;">
+         <table id="customers">
+            <!-- Setup fields -->
+            <thead>
+                <tr>
+                    <th>Mac Address</th>
+                    <th>Organization Name</th>
+                </tr>
+            </thead>
+            <!--print entries up to protocol field-->
+            {% for line in setNicList %}
+            <tbody>
+                <tr>
+                {% for nic in setNicList  %}
+                    <td>{{ nic }}</td>
+                    <td>{{ company}}</td>
+                {% endfor %}
+                </tr>
+            </tbody>
+            {% endfor %}
+         </table>
+     </div>
+
+
+{% endblock %}
