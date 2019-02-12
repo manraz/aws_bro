@@ -39,7 +39,7 @@ def getNestLst(path):
 
 # takes ip and return geolocation json
 def ipLocator(ip):
-    GeoIPDatabase = '/home/ubuntu/bro_filter/GeoLiteCity.dat'
+    GeoIPDatabase = '/home/ubuntu/aws_bro/GeoLiteCity.dat'
     ipData = pygeoip.GeoIP(GeoIPDatabase)
     record = ipData.record_by_name(ip)
     return record
