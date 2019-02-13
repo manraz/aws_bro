@@ -2,6 +2,7 @@
 The code will filter bro log files and output to html with the help o flask. It will output most used ip, geolocation, vendor names...
 ## awsbrofilter
 Further down are the steps requiered for hosting the app on AWS EC2 instance.
+
 $ sudo apt update
 
 $ sudo apt install apache2
