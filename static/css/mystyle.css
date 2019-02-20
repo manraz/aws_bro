@@ -1,12 +1,29 @@
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 25px;
+}
+
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
 }
 
 #customers td, #customers th {
     border: 1px solid #ddd;
     padding: 8px;
+    overflow: hidden;
+    min-width: 50px;
+    max-width: 150px;
+    white-space: nowrap;
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -19,4 +36,15 @@
     text-align: left;
     background-color: #4CAF50;
     color: white;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 25%;
+   background-color: light-blue;
+   color: grey;
+   opacity: 0.5;
+   padding-left: 15px;
 }
