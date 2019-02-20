@@ -1,0 +1,16 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2014-04-03-09-54-49
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+#types	time	string	addr	port	addr	port	enum	count	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+1316457452.197528	C913fyeLxxS83pQh9	192.168.97.10	1029	4.2.2.3	53	udp	8843	www.pop-as.de	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	193.202.110.114	10779.000000	F
+1316457452.672888	C913fyeLxxS83pQh9	192.168.97.10	1029	4.2.2.3	53	udp	17291	t2.4stats.de	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	87.230.83.39	180.000000	F
+1316457453.051688	C913fyeLxxS83pQh9	192.168.97.10	1029	4.2.2.3	53	udp	60298	ajax.googleapis.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	googleapis.l.google.com,74.125.45.95	645.000000,254.000000	F
+1316457453.286482	C913fyeLxxS83pQh9	192.168.97.10	1029	4.2.2.3	53	udp	34953	api.twitter.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	199.59.148.87,199.59.149.200,199.59.149.232,199.59.148.20	25.000000,25.000000,25.000000,25.000000	F
+1316457455.896961	C913fyeLxxS83pQh9	192.168.97.10	1029	4.2.2.3	53	udp	26504	gabqniigyus.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	216.155.133.20	3600.000000	F
+1316457467.977134	CFqt0t2NsmCy01mT0l	192.168.97.10	1029	4.2.2.3	53	udp	58255	732u3hdgfss.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	64.237.54.165	3600.000000	F
+1316457470.886725	CFqt0t2NsmCy01mT0l	192.168.97.10	1029	4.2.2.3	53	udp	20877	wopeytjbsbvmve.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	75.24.186.147,2.27.252.84	1.000000,1.000000	F
+#close	2014-04-03-09-54-50
