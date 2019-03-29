@@ -1,5 +1,5 @@
 '''
-Author: Manu Babanu
+Author: Manu Babanu :)
 Date: 09/04/2018
 Description: Script to run the app and render all log values into html
  pageself.Table with logs, most used ip, geolocation, most
@@ -30,7 +30,7 @@ def homepage():
     ipnumber = []
     hits = []
 
-    # method to build graph with ip and number of time ip was logged
+    # method to build graph with ip and number of times ip was logged
     for ip in ipLstSet:
         if ipLst.count(ip) > 1:
             ipnumber.append(ip)
