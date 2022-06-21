@@ -6,7 +6,7 @@ Jinja2==2.10
 kiwisolver==1.0.1
 MarkupSafe==1.1.0
 matplotlib==3.0.3
-numpy==1.16.2
+numpy==1.22.0
 pygal==2.4.0
 pygeoip==0.3.2
 pyparsing==2.3.1
